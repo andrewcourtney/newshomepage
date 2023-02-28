@@ -2,7 +2,7 @@ $(document).ready(function () {
     //// mobile navigation
     $(".toggle.open").click(function () {
         $(".overlay").animate({ opacity: 1 }).css("visibility", "visible", "zIndex", "1");
-        $(".nav--primary").css({ "transform": "translate(300px, 0)" });
+        $(".nav--primary").css({ "transform": "translate(-300px, 0)" });
     });
 
     $(".overlay").click(function () {
