@@ -1,0 +1,14 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body, body * {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+/*# sourceMappingURL=resets.css.map */

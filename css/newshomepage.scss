@@ -1,0 +1,204 @@
+$softRed: hsl(5, 85%, 63%);
+$softOrange: hsl(35, 77%, 62%);
+$offWhite: hsl(36, 100%, 99%);
+$lightGrey: hsl(233, 8%, 79%);
+$darkGrey: hsl(236, 13%, 42%);
+$darkBlue: hsl(240, 100%, 5%);
+
+
+
+body {}
+
+
+
+
+@media(max-width: 768px) {
+
+    .show-mobile {
+        display: block;
+    }
+
+    .show-mobile-inlineblock {
+        display: inline-block;
+    }
+
+    .show-desktop,
+    .show-desktop-inlineblock {
+        display: none;
+    }
+
+    /*******************
+  START - Mobile navigation
+  *******************/
+    .nav--primary {
+        z-index: 11;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 300px;
+        left: -300px;
+        padding: 0.5rem;
+        transition: transform 0.3s ease-in-out;
+        background-color: #0d352d;
+        border-right: 2px solid #07221d;
+        text-align: right;
+    }
+
+    .nav--primary ul,
+    .nav--primary__subtitle {
+        text-align: left;
+    }
+
+    .nav--primary ul {
+        margin-top: 1rem;
+    }
+
+    .nav--primary li,
+    .nav--primary li a {
+        border-radius: 4px 10px;
+    }
+
+    .nav--primary li {
+        display: block;
+        margin: 0;
+        margin-bottom: 0.5rem;
+        background-color: #07221d;
+        border-bottom: 1px solid #0d352d;
+    }
+
+    .nav--primary li:last-child {
+        margin-bottom: 0;
+        border-bottom: 0;
+    }
+
+    .nav--primary li a {
+        display: block;
+        margin: 0;
+        padding: 0.5rem 0.75rem;
+        border-bottom: 0;
+    }
+
+    .nav--primary__subtitle {
+        padding: 1.5rem 0 0.25rem 0.75rem;
+        border-bottom: 1px solid #f4f4f4;
+        font-weight: 400;
+    }
+
+    ul.nav--primary__block-links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0.5rem;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.25rem;
+        text-align: center;
+    }
+
+    ul.nav--primary__block-links--social {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    ul.nav--primary__block-links li {
+        margin-bottom: 0;
+        border-bottom: 0;
+        background-color: transparent;
+    }
+
+    ul.nav--primary__block-links li a {
+        padding: 0.75rem;
+    }
+
+    ul.nav--primary__block-links li p {
+        margin-top: 0.15rem;
+        font-size: 0.9rem;
+    }
+
+    ul.nav--primary__block-links li i {
+        font-size: 1.75rem;
+    }
+
+    .nav--secondary ul.nav--secondary__loggedin {
+        justify-content: center;
+        margin-right: 0;
+    }
+
+    .toggle-container {
+        display: flex;
+        align-items: center;
+    }
+
+    button.toggle {
+        border: 0;
+        background: transparent;
+    }
+
+    .toggle.close {
+        display: inline-block;
+        margin: 0.5rem 0 0 0.5rem;
+        padding: 0.2rem 0.5rem;
+        background: #07221d;
+        border-radius: 4px 10px;
+        border-bottom: 0;
+    }
+
+    .toggle.close i {
+        font-size: 1.5rem;
+    }
+
+    .nav--primary li a:hover,
+    .nav--primary li a:active,
+    .nav--primary li a:focus,
+    .toggle.close:hover,
+    .toggle.close:active,
+    .toggle.close:focus {
+        background: #376c62;
+    }
+
+    .overlay {
+        z-index: 10;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(25, 25, 25, 0.6);
+        opacity: 0;
+        visibility: hidden;
+        cursor: pointer;
+    }
+
+    /*******************
+  END - Mobile navigation
+  *******************/
+}
+
+@media(min-width: 769px) {
+    .show-desktop {
+        display: block;
+    }
+
+    .show-desktop-inlineblock {
+        display: inline-block;
+    }
+
+    .show-mobile,
+    .show-mobile-inlineblock {
+        display: none;
+    }
+
+    button.toggle {
+        display: none;
+    }
+
+    .nav--primary {
+        transform: translate(0, 0) !important;
+    }
+    
+    .nav--primary ul.menu {
+        display: flex;
+        grid-gap: 1.5rem;
+        gap: 1.5rem;
+    }
+
+
+}
