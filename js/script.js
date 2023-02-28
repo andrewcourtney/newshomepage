@@ -1,17 +1,23 @@
-$(document).ready(function () {
-    //// mobile navigation
-    $(".toggle.open").click(function () {
-        $(".overlay").animate({ opacity: 1 }).css("visibility", "visible", "zIndex", "1");
-        $(".nav--primary").css({ "transform": "translate(-300px, 0)" });
-    });
+document.onreadystatechange = function () {
+    if (document.readyState == "interactive") {
+        const siteMenu = document.querySelector('.nav--primary');
+        const siteMenuToggleOpen = document.querySelector('.toggle.open');
+        const siteMenuToggleClose = document.querySelector('.toggle.close');
+        const siteMenuOverlay = document.querySelector('.overlay');
 
-    $(".overlay").click(function () {
-        $(this).animate({ opacity: 0 }).css("visibility", "hidden", "zIndex", "0");
-        $(".nav--primary").css({ "transform": "translate(0, 0)" });
-    });
+        siteMenuToggleOpen.addEventListener('click', function () {
+            siteMenuOverlay.classList.add('fadeIn', 'visible');
+            siteMenu.setAttribute('style', `transform: translate(-300px, 0)`);
+        });
 
-    $(".nav--primary a, .nav--primary button").click(function () {
-        $(".overlay").animate({ opacity: 0 }).css("visibility", "hidden", "zIndex", "0");
-        $("nav").css({ "transform": "translate(0, 0)" });
-    });
-});
+        siteMenuToggleClose.addEventListener('click', function () {
+            siteMenuOverlay.classList.remove('fadeIn', 'visible');
+            siteMenu.setAttribute('style', `transform: translate(0, 0)`);
+        });
+
+        siteMenuOverlay.addEventListener('click', function () {
+            siteMenuOverlay.classList.remove('fadeIn', 'visible');
+            siteMenu.setAttribute('style', `transform: translate(0, 0)`);
+        });
+    }
+}

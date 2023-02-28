@@ -9,15 +9,19 @@ $darkBlue: hsl(240, 100%, 5%);
 
 body {}
 
-button.toggle{
+.visible{
+    visibility: visible !important;
+}
+
+button.toggle {
     cursor: pointer;
 }
 
-.nav--primary li{
+.nav--primary li {
     font-family: "Inter", Arial, sans-serif;
 }
 
-.nav--primary a{
+.nav--primary a {
     font-weight: 300;
     color: $darkBlue;
     text-decoration: none;
@@ -25,7 +29,7 @@ button.toggle{
 
 .nav--primary a:active,
 .nav--primary a:hover,
-.nav--primary a:focus{
+.nav--primary a:focus {
     color: $darkGrey;
 }
 
@@ -93,7 +97,7 @@ button.toggle{
         align-items: center;
     }
 
-    header .toggle{
+    header .toggle {
         width: 30px;
         height: 30px;
         background: transparent;
@@ -108,11 +112,11 @@ button.toggle{
         border-bottom: 0;
     }
 
-    header .toggle.close{
+    header .toggle.close {
         background-image: url('../images/icon-menu-close.svg');
     }
 
-    header .toggle.open{
+    header .toggle.open {
         background-image: url('../images/icon-menu.svg');
     }
 
@@ -156,9 +160,26 @@ button.toggle{
         transform: translate(0, 0) !important;
     }
 
-    .nav--primary ul{
+    .nav--primary ul {
         display: flex;
         grid-gap: 2rem;
     }
 
 }
+
+/** START keyframes and animations **/
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation: fadeIn 0.3s ease-in forwards;
+}
+
+/** END keyframes and animations **/
