@@ -28,9 +28,12 @@
 </head>
 
 <body>
-  <header>
-    <nav class="nav--primary">
-      <button class="toggle close icon" title="Close Navigation"><i></i></button>
+  <header class="header">
+    <div>
+      <a href="#"><img src="images/logo.svg" alt="W." /></a>
+    </div>
+    <nav class="header__nav">
+      <button class="header__nav-toggle close icon" title="Close Navigation"><i></i></button>
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">New</a></li>
@@ -39,8 +42,8 @@
         <li><a href="#">Categories</a></li>
       </ul>
     </nav>
-    <div class="show-mobile toggle-container">
-      <button class="toggle open icon" title="Open Navigation"><i class="fas fa-bars"></i></button>
+    <div class="show-mobile header__nav-toggle-container">
+      <button class="header__nav-toggle open icon" title="Open Navigation"><i class="fas fa-bars"></i></button>
     </div>
     <!-- END Mobile-Only Navigation -->
   </header>

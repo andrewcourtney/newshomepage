@@ -15,24 +15,8 @@ p {
   visibility: visible !important;
 }
 
-button.toggle {
+.header__nav-toggle {
   cursor: pointer;
-}
-
-.nav--primary li {
-  font-family: "Inter", Arial, sans-serif;
-}
-
-.nav--primary a {
-  font-weight: 300;
-  color: hsl(240, 100%, 5%);
-  text-decoration: none;
-}
-
-.nav--primary a:active,
-.nav--primary a:hover,
-.nav--primary a:focus {
-  color: hsl(236, 13%, 42%);
 }
 
 main {
@@ -42,6 +26,31 @@ main {
   margin-bottom: 2rem;
 }
 
+/** START header **/
+.header {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 3rem;
+}
+
+.header__nav li {
+  font-family: "Inter", Arial, sans-serif;
+}
+
+.header__nav a {
+  font-weight: 300;
+  color: hsl(240, 100%, 5%);
+  text-decoration: none;
+}
+
+.header__nav a:active,
+.header__nav a:hover,
+.header__nav a:focus {
+  color: hsl(236, 13%, 42%);
+}
+
+/** END header **/
 /** START main headline **/
 .news-headline {
   display: grid;
@@ -67,6 +76,7 @@ main {
 }
 
 /** END other stories **/
+/** START media queries **/
 @media (max-width: 768px) {
   .show-mobile {
     display: block;
@@ -78,10 +88,11 @@ main {
   .show-desktop-inlineblock {
     display: none;
   }
-  /*******************
-  START - Mobile navigation
-  *******************/
-  .nav--primary {
+  /** START header **/
+  .header {
+    margin-bottom: 2rem;
+  }
+  .header__nav {
     z-index: 11;
     position: fixed;
     top: 0;
@@ -93,33 +104,30 @@ main {
     background-color: hsl(36, 100%, 99%);
     text-align: right;
   }
-  .nav--primary ul,
-  .nav--primary__subtitle {
+  .header__nav ul {
+    margin-top: 1rem;
     text-align: left;
   }
-  .nav--primary ul {
-    margin-top: 1rem;
-  }
-  .nav--primary li {
+  .header__nav li {
     display: block;
     margin: 0;
     margin-bottom: 1.5rem;
   }
-  .nav--primary li:last-child {
+  .header__nav li:last-child {
     margin-bottom: 0;
     border-bottom: 0;
   }
-  .nav--primary li a {
+  .header__nav li a {
     display: block;
     margin: 0;
     padding: 0.5rem 0.75rem;
     border-bottom: 0;
   }
-  .toggle-container {
+  .header__nav-toggle-container {
     display: flex;
-    align-items: center;
+    justify-content: flex-end;
   }
-  header .toggle {
+  .header__nav-toggle {
     width: 30px;
     height: 30px;
     background: transparent;
@@ -127,17 +135,18 @@ main {
     background-repeat: no-repeat;
     border: 0;
   }
-  header .toggle.close {
+  .header__nav-toggle.close {
     display: inline-block;
     margin: 1rem 0.5rem 0 0rem;
     border-bottom: 0;
   }
-  header .toggle.close {
+  .header__nav-toggle.close {
     background-image: url("../images/icon-menu-close.svg");
   }
-  header .toggle.open {
+  .header__nav-toggle.open {
     background-image: url("../images/icon-menu.svg");
   }
+  /** END header **/
   .overlay {
     z-index: 10;
     position: fixed;
@@ -150,9 +159,6 @@ main {
     visibility: hidden;
     cursor: pointer;
   }
-  /*******************
-  END - Mobile navigation
-  *******************/
 }
 @media (min-width: 769px) {
   .show-desktop {
@@ -165,17 +171,19 @@ main {
   .show-mobile-inlineblock {
     display: none;
   }
-  button.toggle {
-    display: none;
+  .header__nav {
+    transform: translate(0, 0);
   }
-  .nav--primary {
-    transform: translate(0, 0) !important;
-  }
-  .nav--primary ul {
+  .header__nav ul {
     display: flex;
+    justify-content: flex-end;
     grid-gap: 2rem;
   }
+  .header__nav-toggle {
+    display: none;
+  }
 }
+/** END media queries **/
 /** START keyframes and animations **/
 @keyframes fadeIn {
   0% {

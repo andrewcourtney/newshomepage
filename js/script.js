@@ -1,8 +1,8 @@
 document.onreadystatechange = function () {
     if (document.readyState == "interactive") {
-        const siteMenu = document.querySelector('.nav--primary');
-        const siteMenuToggleOpen = document.querySelector('.toggle.open');
-        const siteMenuToggleClose = document.querySelector('.toggle.close');
+        const siteMenu = document.querySelector('.header__nav');
+        const siteMenuToggleOpen = document.querySelector('.header__nav-toggle.open');
+        const siteMenuToggleClose = document.querySelector('.header__nav-toggle.close');
         const siteMenuOverlay = document.querySelector('.overlay');
 
         siteMenuToggleOpen.addEventListener('click', function () {
