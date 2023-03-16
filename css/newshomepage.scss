@@ -5,11 +5,11 @@ $lightGrey: hsl(233, 8%, 79%);
 $darkGrey: hsl(236, 13%, 42%);
 $darkBlue: hsl(240, 100%, 5%);
 
-
+$mainFont: "Inter", Arial, sans-serif;
 
 body {
-    max-width: 80%;
-    margin: 4rem auto 0 auto;
+    margin: 4rem 2rem 0 2rem;
+    font-size: 16px;
 }
 
 img {
@@ -17,7 +17,8 @@ img {
 }
 
 p {
-    max-width: 40ch;
+    font-family: $mainFont;
+    font-size: 1rem;
 }
 
 .visible {
@@ -35,8 +36,20 @@ main {
     margin-bottom: 2rem;
 }
 
+.cta {
+    padding: 1rem 2rem;
+    background: $softRed;
+    font-family: $mainFont;
+    font-size: .8rem;
+    font-weight: 700;
+    color: $offWhite;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .33rem;
+}
+
 /** START header **/
-.header{
+.header {
     display: grid;
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
@@ -44,7 +57,7 @@ main {
 }
 
 .header__nav li {
-    font-family: "Inter", Arial, sans-serif;
+    font-family: $mainFont;
 }
 
 .header__nav a {
@@ -58,16 +71,40 @@ main {
 .header__nav a:focus {
     color: $darkGrey;
 }
+
 /** END header **/
 
 /** START main headline **/
 .news-headline {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
 }
 
 .news-headline__img {
     grid-column: span 2;
+}
+
+.news-headline__title {
+    font-family: $mainFont;
+    font-size: 3.25rem;
+    font-weight: 800;
+    line-height: 3.375rem;
+}
+
+.news-headline__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: .75rem;
+}
+
+.news-headline__details__subtext {
+    line-height: 1.5rem;
+}
+
+.news-headline__details .cta {
+    align-self: flex-start;
 }
 
 /** END main headline **/
@@ -88,7 +125,38 @@ main {
 /** END other stories **/
 
 /** START media queries **/
+@media(max-width: 991px) {
+
+    /** START main headline **/
+    main {
+        grid-template-columns: 100%;
+        grid-gap: 0;
+    }
+
+    .news-headline,
+    .news-headline__details {
+        grid-gap: 1.5rem 0;
+    }
+
+    .news-headline,
+    .news-headline__title,
+    .news-headline__details {
+        grid-column: span 2;
+    }
+
+    .news-headline__title {
+        font-size: 2.375rem;
+        line-height: 2.5rem;
+    }
+
+    /** END main headline **/
+}
+
 @media(max-width: 768px) {
+
+    body {
+        margin: 1.5rem 1rem 2rem 1rem;
+    }
 
     .show-mobile {
         display: block;
@@ -104,7 +172,7 @@ main {
     }
 
     /** START header **/
-    .header{
+    .header {
         margin-bottom: 2rem;
     }
 
@@ -115,7 +183,7 @@ main {
         bottom: 0;
         width: 300px;
         right: -300px;
-        padding: 0.5rem;
+        padding: .5rem;
         transition: transform 0.3s ease-in-out;
         background-color: $offWhite;
         text-align: right;
@@ -140,7 +208,7 @@ main {
     .header__nav li a {
         display: block;
         margin: 0;
-        padding: 0.5rem 0.75rem;
+        padding: .5rem .75rem;
         border-bottom: 0;
     }
 
@@ -160,7 +228,7 @@ main {
 
     .header__nav-toggle.close {
         display: inline-block;
-        margin: 1rem 0.5rem 0 0rem;
+        margin: 1rem .5rem 0 0rem;
         border-bottom: 0;
     }
 
@@ -171,8 +239,8 @@ main {
     .header__nav-toggle.open {
         background-image: url('../images/icon-menu.svg');
     }
-    /** END header **/
 
+    /** END header **/
 
     .overlay {
         z-index: 10;
@@ -186,6 +254,16 @@ main {
         visibility: hidden;
         cursor: pointer;
     }
+}
+
+@media(max-width: 550px) {
+
+    /** START main headline **/
+    .news-headline__title {
+        max-width: 12ch;
+    }
+
+    /** END main headline **/
 }
 
 @media(min-width: 769px) {
@@ -216,6 +294,34 @@ main {
         display: none;
     }
 }
+
+@media(min-width: 1024px) {
+    body {
+        max-width: 90%;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .news-headline__title {
+        max-width: 8ch;
+        font-family: $mainFont;
+        font-size: 3.625rem;
+        line-height: 3.75rem;
+    }
+
+    .news-headline__details__subtext {
+        max-width: 36ch;
+    }
+}
+
+@media(min-width: 1366px) {
+    body {
+        max-width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 /** END media queries **/
 
 
