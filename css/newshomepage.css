@@ -37,6 +37,13 @@ main {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.33rem;
+  transition: background 0.2s ease-in;
+}
+
+.cta:active,
+.cta:hover,
+.cta:focus {
+  background: hsl(240, 100%, 5%);
 }
 
 /** START header **/
@@ -60,7 +67,8 @@ main {
 .header__nav a:active,
 .header__nav a:hover,
 .header__nav a:focus {
-  color: hsl(236, 13%, 42%);
+  color: hsl(5, 85%, 63%);
+  transition: color 0.2s ease-in;
 }
 
 /** END header **/
@@ -140,6 +148,15 @@ main {
 
 .news-newstories__article__title {
   font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.news-newstories__article__title:active,
+.news-newstories__article__title:hover,
+.news-newstories__article__title:focus {
+  color: hsl(35, 77%, 62%);
+  transition: color 0.2s ease-in;
 }
 
 .news-newstories__article__subtext {

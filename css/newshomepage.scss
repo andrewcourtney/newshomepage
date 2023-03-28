@@ -11,7 +11,8 @@ $lightFontWeight: 400;
 $mediumFontWeight: 700;
 $heavyFontWeight: 800;
 
-$fadeIn: color 0.2s ease-in;
+$fadeInColour: color 0.2s ease-in;
+$fadeInBackground: background 0.2s ease-in;
 
 body {
     margin: 4rem 2rem 0 2rem;
@@ -52,6 +53,13 @@ main {
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: .33rem;
+    transition: $fadeInBackground;
+}
+
+.cta:active,
+.cta:hover,
+.cta:focus{
+    background: $darkBlue; 
 }
 
 /** START header **/
@@ -75,7 +83,8 @@ main {
 .header__nav a:active,
 .header__nav a:hover,
 .header__nav a:focus {
-    color: $darkGrey;
+    color: $softRed;
+    transition: $fadeInColour;
 }
 
 /** END header **/
@@ -157,6 +166,15 @@ main {
 
 .news-newstories__article__title {
     font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.news-newstories__article__title:active,
+.news-newstories__article__title:hover,
+.news-newstories__article__title:focus{
+    color: $softOrange;
+    transition: $fadeInColour;
 }
 
 .news-newstories__article__subtext {
@@ -211,7 +229,7 @@ main {
     font-weight: $heavyFontWeight;
     color: $darkGrey;
     text-decoration: none;
-    transition: $fadeIn;
+    transition: $fadeInColour;
 }
 
 .news-otherstories__headline:hover{
