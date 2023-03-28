@@ -7,6 +7,12 @@ $darkBlue: hsl(240, 100%, 5%);
 
 $mainFont: "Inter", Arial, sans-serif;
 
+$lightFontWeight: 400;
+$mediumFontWeight: 700;
+$heavyFontWeight: 800;
+
+$fadeIn: color 0.2s ease-in;
+
 body {
     margin: 4rem 2rem 0 2rem;
     font-size: 16px;
@@ -32,7 +38,7 @@ p {
 main {
     display: grid;
     grid-template-columns: 1fr 0.5fr;
-    grid-gap: 30px;
+    grid-gap: 80px 30px;
     margin-bottom: 2rem;
 }
 
@@ -41,7 +47,7 @@ main {
     background: $softRed;
     font-family: $mainFont;
     font-size: .8rem;
-    font-weight: 700;
+    font-weight: $mediumFontWeight;
     color: $offWhite;
     text-decoration: none;
     text-transform: uppercase;
@@ -88,7 +94,7 @@ main {
 .news-headline__title {
     font-family: $mainFont;
     font-size: 3.25rem;
-    font-weight: 800;
+    font-weight: $heavyFontWeight;
     line-height: 3.375rem;
 }
 
@@ -157,7 +163,7 @@ main {
     margin-top: .75rem;
     margin-bottom: 1.5rem;
     font-size: .9375rem;
-    font-weight: 400;
+    font-weight: $lightFontWeight;
     line-height: 1.875rem;
 }
 
@@ -168,14 +174,55 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column: span 2;
-    grid-gap: 20px;
+    grid-gap: 1.5rem;
 }
 
 .news-otherstories__card {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    gap: 1.5rem;
 }
 
+.news-otherstories__card__image{
+    align-self: flex-start;
+    max-width: 8rem;   
+    height: auto;
+}
+
+.news-otherstories__card__details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.news-otherstories__number,
+.news-otherstories__headline{
+    font-family: $mainFont;
+}
+
+.news-otherstories__number{
+    font-size: 2rem;
+    font-weight: $mediumFontWeight;
+    color: $lightGrey;
+}
+
+.news-otherstories__headline{
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: $heavyFontWeight;
+    color: $darkGrey;
+    text-decoration: none;
+    transition: $fadeIn;
+}
+
+.news-otherstories__headline:hover{
+    color: $softRed;
+}
+
+.news-otherstories__intro{
+    font-size: 1rem;
+    color: $darkGrey;
+    line-height: 1.5rem;
+}
 /** END other stories **/
 
 /** START media queries **/
@@ -241,6 +288,17 @@ main {
     }
 
     /** END main headline **/
+
+    /** START other stories **/
+    .news-otherstories{
+        grid-template-columns: 100%;
+        grid-gap: 2.25rem;
+    }
+
+    .news-otherstories__card__details{
+        justify-content: flex-start;
+    }
+    /** END other stories **/
 }
 
 @media(max-width: 768px) {
