@@ -59,4 +59,4 @@ I would like to use this project as a basis for developing my skillset further w
 ## Author
 
 - Website - [Andrew Courtney](https://www.andrewcourtney.co.uk)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@andrewcourtney](https://www.frontendmentor.io/profile/andrewcourtney)
