@@ -229,7 +229,7 @@ main {
     color: $lightGrey;
 }
 
-.news-otherstories__headline {
+.news-otherstories__headline a {
     display: inline-block;
     font-size: 1.1rem;
     font-weight: $heavyFontWeight;
@@ -238,7 +238,7 @@ main {
     transition: $fadeInColour;
 }
 
-.news-otherstories__headline:hover {
+.news-otherstories__headline a:hover {
     color: $softRed;
 }
 

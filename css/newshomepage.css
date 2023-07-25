@@ -209,7 +209,7 @@ main {
   color: hsl(233, 8%, 79%);
 }
 
-.news-otherstories__headline {
+.news-otherstories__headline a {
   display: inline-block;
   font-size: 1.1rem;
   font-weight: 800;
@@ -218,7 +218,7 @@ main {
   transition: color 0.2s ease-in;
 }
 
-.news-otherstories__headline:hover {
+.news-otherstories__headline a:hover {
   color: hsl(5, 85%, 63%);
 }
 
