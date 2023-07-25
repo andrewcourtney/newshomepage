@@ -1,3 +1,6 @@
+/** START variables **/
+/** END variables **/
+/** START utility styles **/
 body {
   margin: 4rem 2rem 2rem 2rem;
   background-color: #FEFDF9;
@@ -13,30 +16,15 @@ p {
   font-size: 1rem;
 }
 
-.attribution {
-  padding-top: 2rem;
-  font-family: "Inter", Arial, sans-serif;
-  font-size: 11px;
-  text-align: center;
-}
-
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
-
-.visible {
-  visibility: visible !important;
-}
-
-.header__nav-toggle {
-  cursor: pointer;
-}
-
 main {
   display: grid;
   grid-template-columns: 1fr 0.5fr;
   grid-gap: 80px 30px;
   margin-bottom: 2rem;
+}
+
+.visible {
+  visibility: visible !important;
 }
 
 .cta {
@@ -58,6 +46,7 @@ main {
   background: hsl(240, 100%, 5%);
 }
 
+/** END utility styles **/
 /** START header **/
 .header {
   display: grid;
@@ -81,6 +70,10 @@ main {
 .header__nav a:focus {
   color: hsl(5, 85%, 63%);
   transition: color 0.2s ease-in;
+}
+
+.header__nav-toggle {
+  cursor: pointer;
 }
 
 /** END header **/
@@ -236,6 +229,19 @@ main {
 }
 
 /** END other stories **/
+/** START footer **/
+.attribution {
+  padding-top: 2rem;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/** END footer **/
 /** START media queries **/
 @media (min-width: 992px) and (max-width: 1199px) {
   main {
