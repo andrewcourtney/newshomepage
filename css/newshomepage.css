@@ -13,6 +13,17 @@ p {
   font-size: 1rem;
 }
 
+.attribution {
+  padding-top: 2rem;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
 .visible {
   visibility: visible !important;
 }
