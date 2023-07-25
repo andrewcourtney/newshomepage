@@ -1,5 +1,5 @@
 body {
-  margin: 4rem 2rem 0 2rem;
+  margin: 4rem 2rem 2rem 2rem;
   font-size: 16px;
 }
 
@@ -190,7 +190,7 @@ main {
 .news-otherstories__card__details {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .news-otherstories__number,
